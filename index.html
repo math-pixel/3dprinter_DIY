@@ -15,55 +15,7 @@
 			<li class="li_nav">Et apres ?</li>
 		</ul>
 
-	</nav>	
-
-	<section class="container">
-		<h1 class="titre_section">Fonctionnement</h1>
-
-		<article class="contenu">
-			<img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="img_right">
-			<p>Construire son imprimante 3D cest pas sorcier !
-				<br>
-				Pour vous expliquer je vais le faire etape par etape.
-				<br>
-				Dans un premier temps il faut comprendre que une imprimante 3d cest juste un element chauffant dans le quel ont fait avancer un fil en plastisque ( PLA / ABS ) qui vas fondre et deposer un filin de 0.6 a 0.2 mm de diametre. Et pour creer tous cest forme complexe on vas faire deplacer cette element chauffant sur 3 Axes ( X, Y, Z ).
-				<br>
-				Maintenant on vas rentrer un peu plus dans le detail :
-				<br>
-				Pour le coter <mark>Hardware</mark> ( Physique ) de limprimante on a un block de chauffe qui vas etre alimenter en 12V 
-				<mark>image</mark>
-				<br>
-				Pour les deplacement on vas utiliser des moteur pas a pas,<br>
-				un <mark>moteur pas a pas</mark> et un moteur beaucoup plus precis que un moteur classique et on peu lui envoyer des informations specifique pour ce deplacer dun certain angle.<br>
-				Mais pour pouvoir le controller on vas avoir besoin d'un <mark>driver de moteur</mark> qui vas transformer le courant dentrer en courant alternant dans les bobine du moteur pour la rotation.
-				<br>
-				Pour mieux comprendre un moteur pas a pas je vous conseille cette <a href="http://google.com">video</a>.
-				<br>
-				Ensuite pour transformer le mouvement de rotation du moteur en mouvement de translation il y a deux moyen:
-				<br>
-				<ul>
-					<li>Une couroie cranter</li>
-					<li>Une vis sans fin avec un chariot</li>
-				</ul>
-				<br>
-				Ici on utilisera la deuxieme solution car les lecteurs CD ont deja un chariot, un moteur pas a pas et une vis sans fin d'installer
-				<br>
-				Pour finir il reste le coter Software ( Logiciel ).
-				<br>
-				Coter logiciel il y a 3 etapes.
-				<br>
-				La premiere consiste a transformer sont modele 3D en "Layer", en point de coordonee auquel limprimante 3d doit ce rendre. Pour ca on utilisera ( Cura ).
-				<br>
-				Pour la deuxieme etape il faut un language de communiquation ( grbl ) et un logiciel qui envoie les informations ( coordonnee ) pour ca on vas installer " grbl controller " sur notre ordinateur qui envera le Gcode sur l' arduino.
-				<br>
-				Resumer en une image :
-				<img src="">
-			</p>
-		</article>
-
-	</section>
-
-	<hr>
+	</nav>
 
 	<section class="container">
 		<h1 class="titre_section">Materiel requis</h1>
@@ -75,7 +27,64 @@
 				<li>3 driver de moteur pas a pas</li>
 				<li>1 buse chaufante</li>
 				<li>1 bobine de filament</li>
+				<li>1 alimentation ( de PC )</li>
 			</ul>
+		</article>
+
+	</section>
+
+	<hr>
+
+	<section class="container">
+		<h1 class="titre_section">Fonctionnement</h1>
+
+		<article class="contenu">
+			<img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="img_right">
+			<p>Construire son imprimante 3D cest pas sorcier !
+				<br>
+				<br>
+				Pour expliquer ca on vas le faire etape par etape.
+				<br>
+				<br>
+				Dans un premier temps il faut comprendre que une imprimante 3d cest juste un element chauffant dans le quel ont fait avancer un fil en plastisque ( PLA / ABS ) qui vas fondre et deposer un filin de 0.6 a 0.2 mm de diametre. Et pour creer tous cest forme complexe on vas faire deplacer cette element chauffant sur 3 Axes ( X, Y, Z ).
+				<br>
+				<br>
+				Maintenant on vas rentrer un peu plus dans le detail :
+				<br>
+				Pour le coter <mark>Hardware</mark> ( Physique ) de limprimante on a un block de chauffe qui vas etre alimenter en 12V 
+				<mark>image</mark>
+				<br>
+				<br>
+				Pour les deplacement on vas utiliser des moteur pas a pas,<br>
+				un <mark>moteur pas a pas</mark> et un moteur beaucoup plus precis que un moteur classique et on peu lui envoyer des informations specifique pour ce deplacer dun certain angle.<br>
+				Mais pour pouvoir le controller on vas avoir besoin d'un <mark>driver de moteur</mark> qui vas transformer le courant dentrer en courant alternant dans les bobine du moteur pour la rotation.
+				<br>
+				<br>
+				Pour mieux comprendre un moteur pas a pas je vous conseille cette <a href="http://google.com">video</a>.
+				<br>
+				<br>
+				Ensuite pour transformer le mouvement de rotation du moteur en mouvement de translation il y a deux moyen:
+				<ul>
+					<li>Une couroie cranter</li>
+					<li>Une vis sans fin avec un chariot</li>
+				</ul>
+				<br>
+				Ici on utilisera la deuxieme solution car les lecteurs CD ont deja un chariot, un moteur pas a pas et une vis sans fin d'installer
+				<br>
+				<br>
+				Pour finir il reste le coter Software ( Logiciel ).
+				<br>
+				Coter logiciel il y a 3 etapes.
+				<br>
+				La premiere consiste a transformer sont modele 3D en "Layer", en point de coordonee auquel limprimante 3d doit ce rendre. Pour ca on utilisera ( Cura ).
+				<br>
+				Pour la deuxieme etape il faut un language de communiquation ( grbl ) et un logiciel qui envoie les informations ( coordonnee ) pour ca on vas installer " grbl controller " sur notre ordinateur qui envera le Gcode sur l' arduino.
+				<br>
+				<br>
+				Resumer en une image :
+				<img src="">
+			</p>
+
 		</article>
 
 	</section>
@@ -87,7 +96,46 @@
 
 		<article class="contenu">
 			<img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="img_right">
-			<p>Harry Potter, un jeune orphelin, est élevé par son oncle et sa tante qui le détestent. Alors qu'il était haut comme trois pommes, ces derniers lui ont raconté que ses parents étaient morts dans un accident de voiture. Le jour de son onzième anniversaire, Harry reçoit la visite inattendue d'un homme gigantesque se nommant Rubeus Hagrid, et celui-ci lui révèle qu'il est en fait le fils de deux puissants magiciens et qu'il possède lui aussi d'extraordinaires pouvoirs.Harry Potter, un jeune orphelin, est élevé par son oncle et sa tante qui le détestent. Alors qu'il était haut comme trois pommes, ces derniers lui ont raconté que ses parents étaient morts dans un accident de voiture. Le jour de son onzième anniversaire, Harry reçoit la visite inattendue d'un homme gigantesque se nommant Rubeus Hagrid, et celui-ci lui révèle qu'il est en fait le fils de deux puissants magiciens et qu'il possède lui aussi d'extraordinaires pouvoirs.Harry Potter, un jeune orphelin, est élevé par son oncle et sa tante qui le détestent. Alors qu'il était haut comme trois pommes, ces derniers lui ont raconté que ses parents étaient morts dans un accident de voiture. Le jour de son onzième anniversaire, Harry reçoit la visite inattendue d'un homme gigantesque se nommant Rubeus Hagrid, et celui-ci lui révèle qu'il est en fait le fils de deux puissants magiciens et qu'il possède lui aussi d'extraordinaires pouvoirs.Harry Potter, un jeune orphelin, est élevé par son oncle et sa tante qui le détestent. Alors qu'il était haut comme trois pommes, ces derniers lui ont raconté que ses parents étaient morts dans un accident de voiture. Le jour de son onzième anniversaire, Harry reçoit la visite inattendue d'un homme gigantesque se nommant Rubeus Hagrid, et celui-ci lui révèle qu'il est en fait le fils de deux puissants magiciens et qu'il possède lui aussi d'extraordinaires pouvoirs. </p>
+			<p>Donc premiere etape il faut ce munir des 3 graveurs cd que on vas demonter pour obtenir leur chariot
+				<br>
+				<img src="">
+				<br>
+				Pour commencer il vas falloir fabriquer un mini socle en bois sur la chariot de laxe des "X" pour pouvoir fixer le chariot de l' axe "Y".
+				<br>
+				Puis perpendiculairement au deux axes on vas placer le 3eme chariot pour ce deplacer de haut en bas.
+				<br>
+				Pour fixer les 3 axes j'ai plier un rectangle de taule dans la largeur.
+				<br>
+				<br>
+				Ensuite on vient fixer la base chauffante avec la buse sur l' axe des "Z".
+				<br>
+				<br>
+				<br>
+				A cette Etape on a fait la moitier ! enfin !
+				<br>
+				<br>
+				<br> 
+				Pour faire arriver le filament jusqua la buse on vas fabriquer un extruder:
+				<br>
+				c' est tout simplement un moteur qui pousse le fil dans un tube de guidage jusquau bloc chauffant !
+				<br>
+				voir l'image ci-contre :D
+				<img src="">
+				<br>
+				<br>
+				ensuite pour controller tous ca il faut cabler tout les cables au " mini cerveau " L' arduino.
+				<br>
+				Pour vous Faciliter la vie voici un shema de cablage :
+				<img src="">
+				<br>
+				<br>
+				<br>
+				ensuite pour le coter software de limprimante on a juste a upload <a href="https://google.com"> ce fichier </a>dans larduino et a telecharger grbl controller sur notre ordinateur.
+				<br>
+				<br>
+				enfin on a plus que a upload un fichier grbl dans lapplication et a lancer limpression.
+
+			</p>
 		</article>
 
 	</section>
