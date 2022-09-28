@@ -26,7 +26,38 @@
 				<br>
 				Pour vous expliquer je vais le faire etape par etape.
 				<br>
-				Dans un premier temps il faut comprendre que une imprimante 3d cest juste un element chauffant dans le quel ont fait avancer un fil en plastisque ( PLA / ABS ) qui vas fondre et deposer un filin de 0.6 a 0.2 mm de diametre. Et pour creer tous cest forme complexe on vas faire deplacer cette element chauffant sur 3 Axes
+				Dans un premier temps il faut comprendre que une imprimante 3d cest juste un element chauffant dans le quel ont fait avancer un fil en plastisque ( PLA / ABS ) qui vas fondre et deposer un filin de 0.6 a 0.2 mm de diametre. Et pour creer tous cest forme complexe on vas faire deplacer cette element chauffant sur 3 Axes ( X, Y, Z ).
+				<br>
+				Maintenant on vas rentrer un peu plus dans le detail :
+				<br>
+				Pour le coter <mark>Hardware</mark> ( Physique ) de limprimante on a un block de chauffe qui vas etre alimenter en 12V 
+				<mark>image</mark>
+				<br>
+				Pour les deplacement on vas utiliser des moteur pas a pas,<br>
+				un <mark>moteur pas a pas</mark> et un moteur beaucoup plus precis que un moteur classique et on peu lui envoyer des informations specifique pour ce deplacer dun certain angle.<br>
+				Mais pour pouvoir le controller on vas avoir besoin d'un <mark>driver de moteur</mark> qui vas transformer le courant dentrer en courant alternant dans les bobine du moteur pour la rotation.
+				<br>
+				Pour mieux comprendre un moteur pas a pas je vous conseille cette <a href="http://google.com">video</a>.
+				<br>
+				Ensuite pour transformer le mouvement de rotation du moteur en mouvement de translation il y a deux moyen:
+				<br>
+				<ul>
+					<li>Une couroie cranter</li>
+					<li>Une vis sans fin avec un chariot</li>
+				</ul>
+				<br>
+				Ici on utilisera la deuxieme solution car les lecteurs CD ont deja un chariot, un moteur pas a pas et une vis sans fin d'installer
+				<br>
+				Pour finir il reste le coter Software ( Logiciel ).
+				<br>
+				Coter logiciel il y a 3 etapes.
+				<br>
+				La premiere consiste a transformer sont modele 3D en "Layer", en point de coordonee auquel limprimante 3d doit ce rendre. Pour ca on utilisera ( Cura ).
+				<br>
+				Pour la deuxieme etape il faut un language de communiquation ( grbl ) et un logiciel qui envoie les informations ( coordonnee ) pour ca on vas installer " grbl controller " sur notre ordinateur qui envera le Gcode sur l' arduino.
+				<br>
+				Resumer en une image :
+				<img src="">
 			</p>
 		</article>
 
@@ -74,6 +105,16 @@
 	</section>
 
 	<hr>
+
+
+
+
+
+
+<img src="data:image/jpeg;base64,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">
+
+
+
 
 </body>
 
